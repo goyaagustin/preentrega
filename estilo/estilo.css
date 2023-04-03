@@ -2,6 +2,9 @@ header {
     background-color:salmon;
     text-align: center;
     padding: 50px;
+    grid-area: header;
+    border: solid 3px rgb(239, 197, 192);
+    height: auto;
 }
 
 h1 {
@@ -14,14 +17,24 @@ a {
     padding: 10px;
     text-decoration: none;
     color: black
-
 }
+
+.nav {
+    grid-area: nav;
+}
+
 
 ul.navegador {
     background-color: rgb(247, 182, 175);
     margin: 0;
     border-style: solid;
     border-color: rgb(249, 228, 225);
+    grid-area: navegador;
+}
+
+.section{
+    grid-area: section;
+    background-color: antiquewhite;
 }
 
 p {
@@ -33,6 +46,8 @@ p {
 footer {
     background-color: lightskyblue;
     padding: 40px 0 ;
+    grid-area: footer;
+    border: solid 3px rgb(199, 231, 250);
 }
 
 footer div {
@@ -64,4 +79,33 @@ a.explab:hover {
 
 a.explab:active {
     color: aqua;
+}
+
+.propaganda {
+    border: 1px black dotted;
+    grid-area: propaganda;
+    height: 100px;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "section section propaganda"
+                         "footer footer footer";
+
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "section section section"
+                         "propaganda propaganda propaganda"
+                         "footer footer footer";
+    }
 }
