@@ -1,0 +1,67 @@
+header {
+    background-color:salmon;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-family: 'rubik', sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    color:brown
+}
+
+a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black
+
+}
+
+ul.navegador {
+    background-color: rgb(247, 182, 175);
+    margin: 0;
+    border-style: solid;
+    border-color: rgb(249, 228, 225);
+}
+
+p {
+    font-family: 'rubik', sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
+}
+
+
+footer {
+    background-color: lightskyblue;
+    padding: 40px 0 ;
+}
+
+footer div {
+    display: inline;
+    padding-left: 50px;
+}
+
+.inicio {
+    text-align: right;
+    padding-right: 50px;
+    padding-left: 900px;
+}
+
+img.consultorio, iframe.consultorio {
+    padding: 20px;
+}
+
+a.explab:link {
+    color: rgb(112, 112, 199);   
+}
+
+a.explab:visited {
+    color: blue;
+}
+
+a.explab:hover {
+    color:rgb(0, 170, 170);
+}
+
+a.explab:active {
+    color: aqua;
+}
