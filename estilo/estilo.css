@@ -1,10 +1,9 @@
 header {
-    background-color:salmon;
+    background-color:rgb(247, 152, 141);
     text-align: center;
-    padding: 50px;
+    padding: 30px;
     grid-area: header;
     border: solid 3px rgb(239, 197, 192);
-    height: auto;
 }
 
 h1 {
@@ -12,47 +11,65 @@ h1 {
     color:brown
 }
 
-a {
-    display: inline-block;
-    padding: 10px;
+h3 {text-align: center;}
+
+a { font-size:20px;
+    padding: 5px;
     text-decoration: none;
-    color: black
+    color: rgb(210, 60, 60);
 }
+
+a.menu:hover {color: black;transition-duration: .5s;}
+a.menu:active {color:rgb(112, 112, 199);}
 
 .nav {
     grid-area: nav;
 }
 
-
-ul.navegador {
+.navegador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: rgb(247, 182, 175);
-    margin: 0;
+    margin: 0px;
+    padding: 5px;
     border-style: solid;
     border-color: rgb(249, 228, 225);
     grid-area: navegador;
 }
 
-.section{
+.section {
     grid-area: section;
     background-color: antiquewhite;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'rubik', sans-serif, Verdana, Geneva, Tahoma, sans-serif;
 }
+
+li {font-family: 'rubik', sans-serif, Verdana, Geneva, Tahoma, sans-serif; padding: 5px;}
+
+.propaganda {
+    grid-area: propaganda;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.propaganda1 {width: 300px;margin: 5px;}
 
 p {
     font-family: 'rubik', sans-serif, Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 10px;
 }
 
-
-footer {
+.footer {
     background-color: lightskyblue;
-    padding: 40px 0 ;
+    padding: 20px;
     grid-area: footer;
     border: solid 3px rgb(199, 231, 250);
-}
-
-footer div {
-    display: inline;
-    padding-left: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .inicio {
@@ -65,47 +82,67 @@ img.consultorio, iframe.consultorio {
     padding: 20px;
 }
 
-a.explab:link {
-    color: rgb(112, 112, 199);   
+a.explab:link {color: rgb(112, 112, 199);}
+a.explab:visited {color: blue;}
+a.explab:hover {color:rgb(0, 170, 170);}
+a.explab:active {color: aqua;}
+a.explab {font-size: 16px;}
+
+.nav {text-decoration: none;}
+
+
+.consultorio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-a.explab:visited {
-    color: blue;
-}
+.consultorio img {padding: 20px 40px;}
 
-a.explab:hover {
-    color:rgb(0, 170, 170);
-}
-
-a.explab:active {
-    color: aqua;
-}
-
-.propaganda {
-    border: 1px black dotted;
-    grid-area: propaganda;
-    height: 100px;
-}
+.contactos {font-size: 20px;padding: 10px;list-style: none;display: flex;}
+.contactos img {padding: 0 10px;}
+textarea {height: 100px; width: 450px;}
+input {width: 300px;}
 
 .contenedor {
-    width: 100%;
+    width: auto;
     margin: 10px;
     display: grid;
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: repeat (4, 1fr);
-    grid-template-areas: "header header header"
-                         "nav nav nav"
-                         "section section propaganda"
-                         "footer footer footer";
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header header header header"
+                         "nav nav nav nav nav"
+                         "section section section section propaganda"
+                         "footer footer footer footer footer";
+}
 
+.contenedor2 {
+    width: auto;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header"
+                         "nav"
+                         "section"
+                         "footer";
 }
 
 @media screen and (max-width: 768px) {
     .contenedor {
-    grid-template-areas: "header header header"
-                         "nav nav nav"
-                         "section section section"
-                         "propaganda propaganda propaganda"
-                         "footer footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header"
+                         "nav"
+                         "section"
+                         "propaganda"
+                         "footer";
     }
+    .propaganda {display: flex;justify-content: center;margin: 10px;}
+    .consultorio {display:flex;flex-direction: column;justify-content: space-between; align-items: center;}
+    .navegador {display:flex;flex-direction: row; flex-wrap: wrap;}
+    .consultorio img {padding: 20px; width: 300px;height: 200px;}
+    .contactos {justify-content: center;}
+    .formulario {justify-content: center;}
 }

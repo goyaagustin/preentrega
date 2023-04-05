@@ -5,60 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilo/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Rubik:wght@300&display=swap');
+      </style>
     <title>Consultorio</title>
 </head>
 
-
-<header>
-    <img src="../imagen/profile-pic-3.png" alt="agustín" height="200px">
-    <h1>Agustín Tomas Goya</h1>
-    <h3>Médico Psiquiatra</h3>
-</header>
-<nav>
-    <ul class="navegador">   
-    <a href="../index.html">Inicio</a>
-    <a href="cv.html">Currículum Vitae</a>
-    <a href="reprocann.html"> Reprocann</a>
-    <a href="consultorio.html">Consultorio</a>
-    <a href="contacto.html">Contacto</a>
-    </ul>
-</nav>
-
-
 <body>
+<div class="contenedor2">
+  <header class="header">
+      <img src="../imagen/profile-pic-3.png" alt="agustín" height="175px">
+      <h1>Agustín Tomas Goya</h1>
+      <h3>Médico Psiquiatra</h3>
+  </header>
+  <nav class="nav">
+      <ul class="navegador">   
+      <a class="menu" href="../index.html">Inicio</a>
+      <a class="menu" href="cv.html">Currículum Vitae</a>
+      <a class="menu" href="reprocann.html"> Reprocann</a>
+      <a class="menu" href="consultorio.html">Consultorio</a>
+      <a class="menu" href="contacto.html">Contacto</a>
+      </ul>
+  </nav>
+
+<section class="section">
+    <h3>Contacto</h3>
     <ul>
-    <li class="contactos">Mail: goya.agustin@gmail.com</li>
-    <li class="contactos">Teléfono: 15-6105-5169</li>
-    <li class="contactos">Instagram: goya.agustin</li>
-    <li class="contactos">Facebook: Goya Agustín</li>
+    <li class="contactos"><img src="../imagen/mail.png" alt="icon mail" height="25px"> goya.agustin@gmail.com</li>
+    <li class="contactos"><img src="../imagen/whatsapp.png" alt="icon whatsapp" height="25px"> 15-6105-5169</li>
+    <li class="contactos"> <img src="../imagen/instagram.png" alt="icon ig" height="25px">goya.agustin</li>
+    <li class="contactos"><img src="../imagen/facebook.png" alt="icon fb" height="25px"> Goya Agustín</li>
+    <li class="contactos"><img src="../imagen/linkedin.png" alt="icon in" height="25px">Goya Agustín</li>
     </ul>
     <div class="formulario">
         <p>Ante cualquier duda deja tu e-mail y nos estaremos contactando con vos</p>
         <form action="../../form-result.php" target="_blank">
-          <fieldset>
+            <fieldset>
             <legend>Dejame tu consulta</legend>
             <p><label>Nombre y Apellido: <input type="text" name="nombre"></label></p>
             <p><label>Correo electrónico: <input type="text" name="correo"></label></p>
             <p><label>Tu mensaje:<br>
-                <textarea name="mensaje"></textarea>
+            <textarea name="mensaje"></textarea>
               </label>
             </p>      
-          </fieldset>
-          <p>
-            <input type="submit" value="Enviar mensaje">
-            <input type="reset" value="Comenzar de nuevo">
-          </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar mensaje">
+                <input type="reset" value="Comenzar de nuevo">
+            </p>
         </form>
     </div>
-</body>
+  </section>
 
 
-<footer>
+<footer class="footer">
     <div class="copy">Copyright 2023</div>
 </footer>
-
-
+</div>
+</body>
 </html>
