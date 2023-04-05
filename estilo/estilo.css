@@ -121,13 +121,15 @@ input {width: 300px;}
     width: auto;
     margin: 10px;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: "header"
                          "nav"
                          "section"
-                         "footer";
+                         "footer";     
 }
+
+
 
 @media screen and (max-width: 768px) {
     .contenedor {
@@ -143,6 +145,8 @@ input {width: 300px;}
     .consultorio {display:flex;flex-direction: column;justify-content: space-between; align-items: center;}
     .navegador {display:flex;flex-direction: row; flex-wrap: wrap;}
     .consultorio img {padding: 20px; width: 300px;height: 200px;}
-    .contactos {justify-content: center;}
-    .formulario {justify-content: center;}
+    .section.contactos {display: flex; flex-direction:column; justify-content: center;}
+    textarea {height: 100px; width: 180px;}
+    input {width: 200px;}
 }
+
